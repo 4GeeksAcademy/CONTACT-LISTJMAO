@@ -35,6 +35,7 @@ export default function storeReducer(store, action = {}) {
         ...store,
         contacts: action.payload
       };
+//////////////////////////////////////////
 
 
 

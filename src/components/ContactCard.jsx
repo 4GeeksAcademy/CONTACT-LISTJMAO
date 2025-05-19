@@ -14,9 +14,9 @@ const ContactCard = ({contact }) => {
                     <div className="col-md-8">
                         <div className="card-body">
                             <p className="card-title">{contact.name}</p>
-                            <p className="card-text">{contact.phone}</p>
-                            <p className="card-text">{contact.email}</p>
-                            <p className="card-text">{contact.address}</p>
+                            <p className="card-text">Phone: {contact.phone}</p>
+                            <p className="card-text">Email: {contact.email}</p>
+                            <p className="card-text">Address: {contact.address}</p>
 
                         </div>
                     </div>

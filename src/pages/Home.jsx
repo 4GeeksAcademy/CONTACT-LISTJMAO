@@ -44,18 +44,17 @@ export const Home = () => {
 	
 
 	return (
-		<div className="container text-center mt-5">
+		<div className="container mt-5">
+
 			{store.contacts.map((value, index)=>{
 				return(
 					<ContactCard key={index} contact={value}/>
 				)
-			}
+			})}
 
 
 
 
-			
-		
 		</div>
 	);
-}; 
+};
