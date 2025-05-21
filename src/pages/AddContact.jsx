@@ -20,6 +20,12 @@ const AddContact =()=> {
 
     const FormSubmit= (e) =>{
       e.preventDefault();
+
+      if(!form.name || !form.address || !form.phone || !form.email){
+        alert("please fill out all fields before saving")
+        return
+      }
+
       fetch("https://playground.4geeks.com/contact/agendas/Abaunza/contacts", {
         method: "POST",
         headers: {
