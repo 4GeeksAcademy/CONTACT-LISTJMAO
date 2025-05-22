@@ -1,10 +1,11 @@
 import React, {useState} from "react"
 import useGlobalReducer from "../hooks/useGlobalReducer"
-import { json } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 const AddContact =()=> {
 
+    const navigate = useNavigate()
     const {store, dispatch} = useGlobalReducer()
     const [form, setForm] = useState({
         name: "",
@@ -44,6 +45,7 @@ const AddContact =()=> {
           type:"ADD_CONTACT",
           payload:newContact
         })
+        navigate("/")
       })
       .catch((error)=> console.error("Error creating Contact:", error))
     }
